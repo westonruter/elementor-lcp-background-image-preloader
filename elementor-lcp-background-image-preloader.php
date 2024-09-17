@@ -33,7 +33,7 @@ if ( defined( __NAMESPACE__ . '\VERSION' ) ) {
 const VERSION = '0.1.0';
 
 /**
- * Displays the HTML generator meta tag for the Image Prioritizer plugin.
+ * Displays the HTML generator meta tag for the plugin.
  *
  * See {@see 'wp_head'}.
  *
