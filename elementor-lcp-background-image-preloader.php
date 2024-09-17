@@ -88,7 +88,7 @@ function visit_tag( OD_Tag_Visitor_Context $context ): bool {
 			if (
 				$background_image['min_width'] >= $group->get_minimum_viewport_width()
 				&&
-				$background_image['max_width'] >= $group->get_maximum_viewport_width()
+				$background_image['max_width'] <= $group->get_maximum_viewport_width()
 			) {
 
 				$link_attributes = array(
