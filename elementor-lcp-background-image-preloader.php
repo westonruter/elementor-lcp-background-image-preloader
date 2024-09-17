@@ -82,8 +82,11 @@ function visit_tag( OD_Tag_Visitor_Context $context ): bool {
 
 	$element_id        = $processor->get_attribute( 'data-id' );
 	$background_images = get_elementor_element_background_images( $element_id );
-	$xpath             = $processor->get_xpath();
-	foreach ( $context->url_metrics_group_collection->get_groups_by_lcp_element( $xpath ) as $group ) {
+	if ( count( $background_images ) === 0 ) {
+		return false; // No need to track this element in URL Metrics since it has no background images.
+	}
+
+	foreach ( $context->url_metrics_group_collection->get_groups_by_lcp_element( $processor->get_xpath() ) as $group ) {
 		foreach ( $background_images as $background_image ) {
 			if (
 				$background_image['min_width'] >= $group->get_minimum_viewport_width()
