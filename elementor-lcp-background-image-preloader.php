@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor LCP Background Image Preloader
  * Plugin URI: https://github.com/westonruter/elementor-lcp-background-image-preloader
- * Description: Optimizes the loading of the background image added by Elementor LCP image loading with <code>fetchpriority=high</code> and applies image lazy-loading by leveraging client-side detection with real user metrics.
+ * Description: Optimizes the loading of the background images from Elementor-added LCP elements via preload links with fetchpriority=high.
  * Requires at least: 6.5
  * Requires PHP: 7.2
  * Requires Plugins: optimization-detective
